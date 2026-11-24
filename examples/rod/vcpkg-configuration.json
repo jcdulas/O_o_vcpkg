@@ -1,0 +1,17 @@
+{
+  "default-registry": {
+    "kind": "builtin",
+    "baseline": "000d1bda1ffa95a73e0b40334fa4103d6f4d3d48"
+  },
+  "registries": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/jcdulas/O_o_vcpkg",
+      "baseline": "31c84484efe4a64cbad587120ae31c492c502236",
+      "packages": [
+        "oo-model",
+        "oo-solver"
+      ]
+    }
+  ]
+}
