@@ -32,3 +32,10 @@ jobs:
         run: cmake -S build/rod -B build/client -DCMAKE_TOOLCHAIN_FILE="${{ github.workspace }}/build/vcpkg/scripts/buildsystems/vcpkg.cmake" -DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }} -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build build/client --config Release
       - run: ctest --test-dir build/client -C Release --output-on-failure
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: vcpkg-logs-${{ matrix.triplet }}
+          path: |
+            build/client/vcpkg-manifest-install.log
+            build/vcpkg/buildtrees/oo-*/*.log
