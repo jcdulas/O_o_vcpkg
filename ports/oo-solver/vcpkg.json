@@ -1,6 +1,7 @@
 {
   "name": "oo-solver",
   "version-semver": "0.2.1",
+  "port-version": 1,
   "description": "Finite element analyses using native model snapshots",
   "homepage": "https://github.com/jcdulas/O_o_Solver",
   "license": "MIT",
