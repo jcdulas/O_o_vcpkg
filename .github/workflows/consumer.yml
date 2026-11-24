@@ -1,0 +1,34 @@
+name: Installed C++ consumer
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  rod:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2022
+            triplet: x64-windows
+          - os: ubuntu-24.04
+            triplet: x64-linux
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: microsoft/vcpkg
+          ref: 432d982fb917e1d9b032197b01572b83bcb02a75
+          path: build/vcpkg
+      - name: Install vcpkg (Windows)
+        if: runner.os == 'Windows'
+        run: ./build/vcpkg/bootstrap-vcpkg.bat -disableMetrics
+      - name: Install vcpkg (Linux)
+        if: runner.os == 'Linux'
+        run: ./build/vcpkg/bootstrap-vcpkg.sh -disableMetrics
+      - run: cmake -P examples/prepare.cmake
+      - name: Configure an external consumer with the public registry
+        run: cmake -S build/rod -B build/client -DCMAKE_TOOLCHAIN_FILE="${{ github.workspace }}/build/vcpkg/scripts/buildsystems/vcpkg.cmake" -DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }} -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build/client --config Release
+      - run: ctest --test-dir build/client -C Release --output-on-failure

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.25)
+project(rod LANGUAGES CXX)
+find_package(oo-solver CONFIG REQUIRED)
+add_executable(rod main.cpp)
+target_link_libraries(rod PRIVATE oos::api)
+enable_testing()
+add_test(NAME rod-displacement COMMAND rod)

@@ -1,0 +1,7 @@
+{
+  "name": "oo-rod-example",
+  "version": "1.0.0",
+  "dependencies": [
+    "oo-solver"
+  ]
+}

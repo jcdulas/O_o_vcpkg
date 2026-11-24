@@ -1,0 +1,19 @@
+{
+  "name": "oo-solver",
+  "version-semver": "0.2.1",
+  "description": "Finite element analyses using native model snapshots",
+  "homepage": "https://github.com/jcdulas/O_o_Solver",
+  "license": "MIT",
+  "supports": "x64 & (linux | (windows & !uwp & !mingw))",
+  "dependencies": [
+    "oo-model",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
