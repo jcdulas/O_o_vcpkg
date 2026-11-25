@@ -2,8 +2,8 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 vcpkg_from_github(
     OUT_SOURCE_PATH source
     REPO jcdulas/O_o_Model
-    REF 184b2ce79ad1a8dbc0aeb220b36aba62556dbdc4
-    SHA512 5ade382b20b7051e56b95ea4f921226320b8738c75b8c53cfff9a47ebac62a3d07645f16d42d47bf2afaa7b949c378f34d9fbc0d95beabaa1c29ca43ed3cf08a
+    REF 2a10c731b52b3ac37b6d11ca77d92131b819f5cc
+    SHA512 beb56c24917cffb308a2a379557fa45774841b7d6edd49e4e760dd69d4d3a5380d812d0c6ffb06e22f514a240e9d4363d1995c8fd0ccf3c1891764ee2bf51f86
     HEAD_REF main
 )
 vcpkg_cmake_configure(

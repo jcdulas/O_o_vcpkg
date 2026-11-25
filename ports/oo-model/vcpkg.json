@@ -1,6 +1,6 @@
 {
   "name": "oo-model",
-  "version-semver": "0.2.1",
+  "version-semver": "0.2.3",
   "description": "In-memory finite element model API",
   "homepage": "https://github.com/jcdulas/O_o_Model",
   "license": "MIT",

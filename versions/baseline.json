@@ -1,11 +1,11 @@
 {
   "default": {
     "oo-model": {
-      "baseline": "0.2.1",
+      "baseline": "0.2.3",
       "port-version": 0
     },
     "oo-solver": {
-      "baseline": "0.2.2",
+      "baseline": "0.2.3",
       "port-version": 0
     }
   }
