@@ -2,8 +2,8 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 vcpkg_from_github(
     OUT_SOURCE_PATH source
     REPO jcdulas/O_o_Solver
-    REF a4dc3992a123348c62fae51f9f7e7e025d8dfa5e
-    SHA512 c5b6617fa7eb84cf8f72e179e5d2b9b55459cdfebe43ae0047da43a19afa28fb81ddc3e221d4daf09e379a20db6ea1bcc413e10f407e84b3c8e4c7af19398fec
+    REF 243993f55b299dc9b662c7b026ab4e73c33bbf94
+    SHA512 3742125435b0a5e90e55d48fe04f2ba4d8897c475a7c483cd5498409b7c54ec24a5087fa27e3b398bd299d5f9df8d58e91d0aaed7462dd5529337cd4249f7456
     HEAD_REF main
 )
 vcpkg_cmake_configure(
