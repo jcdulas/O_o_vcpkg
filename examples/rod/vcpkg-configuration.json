@@ -9,7 +9,7 @@
     {
       "kind": "git",
       "repository": "https://github.com/jcdulas/O_o_vcpkg",
-      "baseline": "7d8f93ad3e8af23e4adcc6c7b8cb8ea598b466a6",
+      "baseline": "8918eb6a7e48cb44d04eebd5a44dcf56cb260a5b",
       "packages": [
         "oo-model",
         "oo-solver"
